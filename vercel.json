@@ -2,13 +2,24 @@
   "builds": [
     {
       "src": "DjangoProject/wsgi.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "includeFiles": [
+          "media/**",
+          "staticfiles/**"
+        ]
+      }
     }
   ],
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "DjangoProject/staticfiles/$1"
+      "dest": "/DjangoProject/staticfiles/$1"
+    },
+    {
+      "src": "/media/(.*)",
+      "dest": "/media/$1"
     },
     {
       "src": "/(.*)",
