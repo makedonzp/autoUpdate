@@ -1,0 +1,4 @@
+requests==2.31.0
+celery==5.3.6
+django-celery-beat==2.6.0
+redis==4.6.0
