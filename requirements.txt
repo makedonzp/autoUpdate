@@ -1,11 +1,5 @@
-django
+django>=4.2
 gunicorn
 whitenoise
 psycopg2-binary
-python-dotenv
-requests==2.31.0
-celery==5.3.6
-django-celery-beat==2.6.0
-redis==4.6.0
 dj-database-url
-django-cors-headers==4.3.1
