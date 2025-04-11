@@ -66,7 +66,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'DjangoProject.wsgi.application'
 
-
+DEBUG = False
+ALLOWED_HOSTS = ['https://auto-update-iota.vercel.app/', '.now.sh', 'localhost']
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
