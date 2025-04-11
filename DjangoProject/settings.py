@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-k3$(hm=1d@8d1=yapqxi7e%x2t-e-m&xgub$giu9z-b&wfi%b5
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'auto-update-iota.vercel.app',
+    'auto-update-nine.vercel.app',
     '.vercel.app',
     'localhost',
     '127.0.0.1'
@@ -110,3 +110,6 @@ else:
             conn_health_checks=True,
         )
     }
+    if not DEBUG:
+        MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+        MEDIA_URL = '/media/'

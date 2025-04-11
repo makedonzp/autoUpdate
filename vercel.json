@@ -7,7 +7,8 @@
         "maxLambdaSize": "15mb",
         "includeFiles": [
           "media/**",
-          "staticfiles/**"
+          "staticfiles/**",
+          "DjangoProject/**"
         ]
       }
     }
@@ -15,11 +16,11 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/DjangoProject/staticfiles/$1"
+      "dest": "DjangoProject/staticfiles/$1"
     },
     {
       "src": "/media/(.*)",
-      "dest": "/media/$1"
+      "dest": "media/$1"
     },
     {
       "src": "/(.*)",
